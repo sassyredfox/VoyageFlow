@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoyageFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PAGE 1 — REGISTRATION -->
+    <div id="page1" class="page active">
+
+        <div class="card">
+
+            <h1>VoyageFlow</h1>
+            <p class="subtitle">Begin your journey with us</p>
+
+            <form id="registrationForm">
+
+                <!-- Full Name -->
+                <label>Full Name</label>
+                <div class="input-box">
+                    <span class="icon">👤</span>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <label>Email</label>
+                <div class="input-box">
+                    <span class="icon">📧</span>
+                    <input type="email" id="email" placeholder="user@domain.com" required>
+                </div>
+                <p class="error" id="errorEmail"></p>
+
+                <!-- Phone -->
+                <label>Phone Number</label>
+                <div class="input-box">
+                    <span class="icon">📞</span>
+                    <input type="text" id="phone" maxlength="10" placeholder="10-digit phone number" required>
+                </div>
+                <p class="error" id="errorPhone"></p>
+
+                <!-- PIN -->
+                <label>PIN Code</label>
+                <div class="input-box">
+                    <span class="icon">📍</span>
+                    <input type="text" id="pin" maxlength="6" placeholder="6-digit PIN code" required>
+                </div>
+                <p class="error" id="errorPin"></p>
+
+                <!-- Submit -->
+                <button class="submit-btn" type="submit">Begin Journey</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE 1 SUCCESS MODAL -->
+    <div id="modal1" class="modal hidden">
+        <div class="modal-box">
+            <h2>Success!</h2>
+            <p>Registration completed.</p>
+            <button id="goToPage2">Continue</button>
+        </div>
+    </div>
+
+    <!-- PAGE 2 — TRAVEL BLOG -->
+
+    <div id="page2" class="page hidden travel-page">
+
+        <!-- Sticky Nav -->
+        <nav class="travel-nav">
+            <button data-target="paris">Paris</button>
+            <button data-target="tokyo">Tokyo</button>
+            <button data-target="rome">Rome</button>
+            <button data-target="bali">Bali</button>
+            <button data-target="dubai">Dubai</button>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="travel-hero">
+            <h1>Explore Dream Destinations</h1>
+            <p>Discover the world’s most breathtaking places.</p>
+        </header>
+
+        <!-- DESTINATIONS -->
+        <section id="paris" class="destination">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" />
+            <h2>Paris</h2>
+            <p>The City of Lights, filled with romance, culture, and iconic architecture.</p>
+        </section>
+
+        <section id="tokyo" class="destination">
+            <img src="https://th.bing.com/th/id/OIP.dnhuXqzSIV8PrGlXIvzhXQHaEK?w=154&h=108&c=7&bgcl=2233f1&r=0&o=6&dpr=1.3&pid=13.1" />
+            <h2>Tokyo</h2>
+            <p>A futuristic blend of technology, tradition, and vibrant city life.</p>
+        </section>
+
+        <section id="rome" class="destination">
+            <img src="https://www.bing.com/th/id/OIP.myUev7Xlll0qJvv-O7MauQHaE0?w=248&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" />
+            <h2>Rome</h2>
+            <p>Walk through ancient history, incredible cuisine, and timeless monuments.</p>
+        </section>
+
+        <section id="bali" class="destination">
+            <img src="https://www.bing.com/th/id/OIP.1cRSiMGC0LmF5Xqv-T7E8wHaEo?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2https://www.bing.com/th/id/OIP.1cRSiMGC0LmF5Xqv-T7E8wHaEo?w=244&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" />
+            <h2>Bali</h2>
+            <p>Relax in serene beaches, lush forests, and peaceful temples.</p>
+        </section>
+
+        <section id="dubai" class="destination">
+            <img src="https://www.bing.com/th/id/OIP.2wIahx64Dy22ZRq4T6eblwHaJQ?w=160&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" />
+            <h2>Dubai</h2>
+            <p>A luxurious desert paradise with futuristic skyscrapers and adventure.</p>
+        </section>
+
+        <div class="next-btn-wrapper">
+            <button id="goToPage3" class="next-btn">Continue →</button>
+        </div>
+
+    </div>
+
+    <!-- PAGE 3 — PRICE CALCULATOR -->
+    <div id="page3" class="page hidden calculator-page">
+
+        <h1 class="calc-title">Plan Your Trip</h1>
+
+        <div class="calc-card">
+
+            <!-- Travel Options -->
+            <h2 class="section-title">Travel Options</h2>
+            <div class="option-grid">
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="500">
+                    <div class="option-content">
+                        <h3>✈️ Economy Flight</h3>
+                        <p>$500</p>
+                    </div>
+                </label>
+
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="1200">
+                    <div class="option-content">
+                        <h3>🛫 Business Flight</h3>
+                        <p>$1200</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Food Packages -->
+            <h2 class="section-title">Food Packages</h2>
+            <div class="option-grid">
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="150">
+                    <div class="option-content">
+                        <h3>🍜 Local Food Tour</h3>
+                        <p>$150</p>
+                    </div>
+                </label>
+
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="300">
+                    <div class="option-content">
+                        <h3>🍽 Premium Dining</h3>
+                        <p>$300</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Activities -->
+            <h2 class="section-title">Activities</h2>
+            <div class="option-grid">
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="200">
+                    <div class="option-content">
+                        <h3>🏙 City Tour</h3>
+                        <p>$200</p>
+                    </div>
+                </label>
+
+                <label class="option-box">
+                    <input type="checkbox" class="cost" value="400">
+                    <div class="option-content">
+                        <h3>🎢 Adventure Pack</h3>
+                        <p>$400</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Total Price Display -->
+            <div class="total-box">
+                <h2>Total Cost</h2>
+                <span id="totalPrice">$0</span>
+            </div>
+
+            <!-- Confirm -->
+            <button id="confirmCalc" class="confirm-btn">Confirm Selection</button>
+
+        </div>
+    </div>
+
+
+    <!-- PAGE 3 MODAL -->
+    <div id="modal3" class="modal hidden">
+        <div class="modal-box">
+            <h2>Selections Confirmed!</h2>
+            <button id="goToPage4">Continue</button>
+        </div>
+    </div>
+
+    <!-- PAGE 4 — FINAL PAGE -->
+    <div id="page4" class="page hidden">
+
+        <div class="final-card">
+
+            <div class="success-icon">✔</div>
+
+            <h1>Thank You!</h1>
+            <p class="final-subtitle">Your travel simulation is complete.</p>
+
+            <!-- Optional Summary Box -->
+            <div class="summary-box">
+                <h2>Your Selections</h2>
+                <p>This is a simulated booking. No data is stored.</p>
+            </div>
+
+            <button class="restart-btn" onclick="showPage(1)">Start Over</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
